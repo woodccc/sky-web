@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "eslint src --ext .vue,.js,.ts"
   },
   "dependencies": {
     "@types/lodash": "^4.14.144",
@@ -26,6 +27,8 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
     "@vue/cli-plugin-router": "^4.0.0",
@@ -34,10 +37,10 @@
     "@vue/cli-plugin-vuex": "^4.0.0",
     "@vue/cli-service": "^4.0.0",
     "@vue/eslint-config-airbnb": "^4.0.0",
-    "@vue/eslint-config-typescript": "^4.0.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
     "@vue/test-utils": "1.0.0-beta.29",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "eslint": "^6.0.0",
+    "eslint-plugin-vue": "^6.0.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "typescript": "~3.5.3",

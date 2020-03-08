@@ -2,6 +2,7 @@
   <div class="home">
     <div class="content">{{poem.content}}</div>
     <div class="author">《 {{poem.origin}} 》 - {{poem.author}}</div>
+    <div class="author">《 {{poem.origin}} 》 - {{poem.author}}</div>
   </div>
 </template>
 

@@ -7,6 +7,7 @@ import ES6Router from './ES6Router';
 import WebSecurityRouter from './WebSecurityRouter';
 import PerformanceOptimizationRouter from './PerformanceOptimizationRouter';
 import BrowserRouter from './BrowserRouter';
+import DemoRouter from './DemoRouter';
 
 import Webpack from '../views/Webpack/index.vue';
 import EventLoop from '../views/EventLoop/index.vue';
@@ -19,6 +20,7 @@ export default [
   ...WebSecurityRouter,
   ...PerformanceOptimizationRouter,
   ...BrowserRouter,
+  ...DemoRouter,
   {
     path: '/webpack/index',
     name: 'webpack',

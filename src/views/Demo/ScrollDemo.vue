@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import ParallaxContainer from './components/ParallaxContainer'
+import ParallaxContainer from './components/ParallaxContainer.vue'
 
 export default {
 

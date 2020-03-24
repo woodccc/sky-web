@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div class="layout" :style="{'grid-template-columns': asideFold ? '1fr 4fr' : '0fr 5fr'}">
     <div class="side">
       <div class="percentage">
         <el-progress :show-text="false" :percentage="percentage"/>
@@ -13,7 +13,13 @@
       />
     </div>
     <div class="main">
-      <h1 class="title">{{currentAsideItemLabel}}</h1>
+      <h1 class="title">
+        <div class="icon-container" @click="handleToggleAsideFold">
+          <i v-if="asideFold" class="el-icon-s-fold"></i>
+          <i v-else class="el-icon-s-unfold"></i>
+        </div>
+        {{currentAsideItemLabel}}
+      </h1>
       <div class="content">
         <router-view/>
       </div>
@@ -36,6 +42,8 @@ import routes from '@/router/routes';
   },
 })
 export default class Layout extends Vue {
+  asideFold: Boolean = false;
+
   @Prop() private msg!: string;
 
   get asideDataWithRoute(): any {
@@ -68,9 +76,23 @@ export default class Layout extends Vue {
     const hadDone = _.filter(this.allAsideItems, ((item: any) => item.path));
     return Number(((hadDone.length / this.allAsideItems.length) * 100).toFixed(2));
   }
+
+  handleToggleAsideFold() {
+    this.asideFold = !this.asideFold
+  }
 }
 </script>
 
 <style scoped lang="stylus">
   @import "index.styl"
+  .main h1
+    position relative
+  .icon-container
+    height 100%
+    position absolute
+    left 0
+    top 0
+    display flex
+    flex-direction column
+    justify-content center
 </style>

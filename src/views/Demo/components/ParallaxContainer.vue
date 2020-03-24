@@ -9,12 +9,20 @@
         :threshold="200"
       />
 
-      <div style="height: 300px"></div>
+      <div class="bottom">content</div>
+
+      <ParallaxItem
+        :scrollTop="scrollTop"
+        :distance="300"
+        :threshold="500"
+      />
+
+      <div class="bottom">content</div>
 
       <ParallaxItem
         :scrollTop="scrollTop"
         :distance="800"
-        :threshold="500"
+        :threshold="800"
       />
 
       <div class="bottom">bottom</div>

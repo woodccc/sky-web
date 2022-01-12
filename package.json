@@ -15,7 +15,7 @@
     "github-markdown-css": "^3.0.1",
     "highlight.js": "^9.15.10",
     "lodash": "^4.17.15",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^12.3.2",
     "markdown-it-container": "^2.0.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
